@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    background-color: beige;
+    border: 2.5px solid #333;
+}
+
+/*----header-----*/
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2.5px solid #333;
+    padding: 10px;
+}
+
+header li {
+    display: inline-block;
+    padding: 5px 0px;
+}
+
+header input {
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* ------content---- */
+.content {
+    display: flex;
+    justify-content: space-between;
+    height:100%;
+    
+}
+
+li {
+    padding: 5px 10px;
+}
+/* -----left------- */
+.left {
+    flex: 1;
+    flex-basis: 160px;
+    max-width: 200px;
+}
+
+.left h3{
+    border: 3px solid #333;
+    text-align: center;
+}
+.down{
+    border-bottom: 2.5px solid #333;
+}
+/* -----center------ */
+.center {
+    flex: 3;
+    flex-basis: 300px;
+    border-top: 2.5px solid #333;
+    border-left: 2.5px solid #333;
+    border-right: 2.5px solid #333;
+    display: flex;
+    flex-direction: column;
+    
+}
+.center h3 {
+    padding: 10px 20px;
+}
+.center_top {
+    display: flex;
+    justify-content:  space-evenly;
+    height: 70%;
+}
+.center_top_left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.center_top_left img{
+    width: 100%;
+    height: 70% ;
+    margin: 0;
+    padding: 0;
+}
+
+.list_images{
+    display: flex;
+    justify-content:space-between;
+    width: 100%;
+    height: 29%;
+}
+
+.list_images .image {
+    width: 24%;
+    height: 0px;
+}
+
+.image img {
+    width: 100%;
+    height: 100px;
+}
+
+.center_top_right{
+    width: 47%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.center_top_right h3 {
+    font-weight: bold;
+    padding: 10px 0;
+}
+.center_top_right p {
+    line-height: 3;
+    margin-bottom: 30px;
+}
+.center_top_right button {
+    padding: 2px 15px;
+    border-radius: 5px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+.center_down {
+    height: 30%;
+}
+
+.center_down p {
+    margin-left: 20px;
+}
+
+/* css thanh chuyển trang */
+.pagination {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 10px 50px;
+}
+
+.page-number {
+    padding: 5px 15px;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 2px solid #333;
+    cursor: pointer;
+    color: black;
+}
+
+.prev {
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+.next {
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* ------right------- */
+.right {
+    flex: 1;
+    flex-basis: 160px;
+    max-width: 200px;
+    min-height: 900px;
+    border-top: 2.5px solid #333;
+}
+
+.right1 {
+    height: 80%;
+    border-bottom: 2.5px solid #333;
+}
+
+/*-----footer-----*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2.5px solid #333;
+    padding: 10px;
+}
+
+footer li {
+    display: inline-block;
+    padding: 5px 0px;
+}
+ul li a{
+    color: blue;
+}
+.link2,
+.left ul li a,
+.center_top_right a {
+    color: black;
+    text-decoration: none;
+    
+}
+/* mobile: width: < 740px */
+@media only screen and (max-width:46.1875em){
+    .right,.left{
+        display: none;
+    }
+    .center_top {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .center_top_left,.center_top_right {
+        width: 90%;
+        margin: 0px auto;
+        margin-bottom: 30px;
+    }
+    .center_top_right p{
+        margin-bottom: 0px;
+    }
+    .center_down {
+        margin-top: 10px;
+    }
+    header {
+        flex-direction: column;
+    }
+    header ul li{
+        padding: 2px;
+    }
+    header input{
+        width: 70px;
+    }
+}
+
+/* tablet: width: >= 740 && width <=1024 */
+@media only screen and (min-width: 46.25em) and (max-width:63.9375em){
+    .right,.left{
+        display: none;
+    }
+    .center {
+        height: 970px;
+    }
+}
